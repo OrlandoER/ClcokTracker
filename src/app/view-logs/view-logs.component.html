@@ -1,0 +1,19 @@
+<div>
+  <h2>Registros de Horas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Hora de Entrada</th>
+        <th>Hora de Salida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs">
+        <td>{{ log.user }}</td>
+        <td>{{ log.entry | date: 'short' }}</td>
+        <td>{{ log.exit ? (log.exit | date: 'short') : 'No registrado' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
